@@ -1,1 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Legal Desk</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: white;
+    }
 
+    header {
+      background-color: #FF9933; /* Saffron */
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+
+    section {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    #services {
+      background-color: #f9f9f9;
+    }
+
+    #contact {
+      background-color: #138808; /* Indian Green */
+      color: white;
+    }
+
+    h2 {
+      color: #000080; /* Navy Blue */
+    }
+
+    p {
+      color: #333;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .service-box {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      background-color: #000080;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #333399;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      z-index: 100;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #128C7E;
+    }
+
+    .reviews {
+      background-color: #f2f2f2;
+      padding: 30px 20px;
+    }
+
+    .review {
+      background: white;
+      padding: 15px;
+      margin: 10px auto;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .map {
+      padding: 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Emblem_of_India.svg/1200px-Emblem_of_India.svg.png" alt="Indian Emblem">
+    <h1>Digital Legal Desk</h1>
+    <p>Your Trusted Online Legal Solution</p>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a professional online legal service provider, committed to delivering fast, reliable, and affordable legal solutions across India.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-box">
+        <h3>Legal Advice</h3>
+        <p>Talk to our experienced legal consultants online.</p>
+      </div>
+      <div class="service-box">
+        <h3>Document Drafting</h3>
+        <p>We draft legal documents like affidavits, agreements, notices, etc.</p>
+      </div>
+      <div class="service-box">
+        <h3>Online Filing</h3>
+        <p>Get help with court filings, RTIs, and online applications.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <h2>Client Reviews</h2>
+    <div class="review">
+      ⭐⭐⭐⭐⭐ <br>
+      <strong>Ravi Kumar:</strong> Excellent and fast service! Highly recommend Digital Legal Desk.
+    </div>
+    <div class="review">
+      ⭐⭐⭐⭐☆ <br>
+      <strong>Meena Sharma:</strong> Very helpful legal advice at affordable prices. Thank you!
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="#">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <section class="map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.8390305893814!2d80.33187317513247!3d26.84968157670553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c387c1b02b6e1%3A0x6c87b3346c14e46c!2sKanpur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1652679536599!5m2!1sen!2sin"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+  </section>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/918355068667" class="whatsapp-button" target="_blank">
+    💬 Chat with us
+  </a>
+
+</body>
+</html>
