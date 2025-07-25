@@ -1,0 +1,59 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.hero {
+  background: url('banner.jpg') no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  width: 100%;
+}
+
+.section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.section.alt {
+  background-color: #eef2f7;
+}
+
+.section h2 {
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
