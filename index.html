@@ -5,50 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Legal Desk</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">🇮🇳⚖️ Digital Legal Desk</div>
-        <nav>
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#faq">FAQs</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="hero">
+    <header style="background-image: url('images/hero-banner.jpg'); height: 300px; background-size: cover; background-position: center;">
         <h1>Trusted Online Legal Solutions</h1>
         <p>Your Legal Rights, Protected with Pride and Justice.</p>
-    </section>
-    <section id="services">
+    </header>
+
+    <section>
         <h2>Our Services</h2>
-        <ul>
-            <li>Legal Advice & Drafting</li>
-            <li>Property, Family, Civil & Criminal Law</li>
-            <li>Startup & Company Registration</li>
-            <li>Online Court Services</li>
-        </ul>
+        <div>
+            <img src="images/legal-icon.png" alt="Legal Advice" width="50">
+            Legal Advice & Drafting
+        </div>
+        <div>
+            <img src="images/property-icon.png" alt="Property Law" width="50">
+            Property, Family, Civil & Criminal Law
+        </div>
     </section>
-    <section id="about">
+
+    <section>
         <h2>About Us</h2>
+        <img src="images/team-photo.jpg" alt="Our Team" style="width:300px;">
         <p>We are a trusted team of legal professionals providing reliable and accessible legal services online.</p>
     </section>
-    <section id="faq">
-        <h2>FAQs</h2>
-        <p>Coming Soon...</p>
-    </section>
-    <section id="contact">
+
+    <section>
         <h2>Contact Us</h2>
-        <form action="https://formspree.io/f/yourformid" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="_replyto" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
+        <form>
+            <input type="text" placeholder="Your Name"><br>
+            <input type="email" placeholder="Your Email"><br>
+            <textarea placeholder="Your Message"></textarea><br>
             <button type="submit">Send</button>
         </form>
-        <a href="https://wa.me/918335506867" class="whatsapp">Chat on WhatsApp</a>
     </section>
 </body>
 </html>
