@@ -1,0 +1,17 @@
+# Save the uploaded image as 'logo.jpg' in the updated website folder
+uploaded_logo_path = "/mnt/data/logo.jpg"
+Image.open("/mnt/data/logo.jpg").save(uploaded_logo_path)
+
+# Save the logo in the new folder for the updated website
+final_logo_path = os.path.join(updated_path, "logo.jpg")
+Image.open(uploaded_logo_path).save(final_logo_path)
+
+# Recreate the zip with the logo included
+with ZipFile(output_html_path, 'w') as zipf:
+    for foldername, subfolders, filenames in os.walk(updated_path):
+        for filename in filenames:
+            file_path = os.path.join(foldername, filename)
+            arcname = os.path.relpath(file_path, updated_path)
+            zipf.write(file_path, arcname)
+
+output_html_path
