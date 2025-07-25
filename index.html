@@ -13,7 +13,7 @@
     }
 
     header {
-      background: linear-gradient(135deg, #FF9933, #FF7518); /* Warm saffron gradient */
+      background: linear-gradient(135deg, #FF9933, #FF7518);
       color: white;
       text-align: center;
       padding: 30px 20px;
@@ -30,20 +30,20 @@
     }
 
     #about {
-      background: #fffbe6; /* light yellow */
+      background: #fffbe6;
     }
 
     #services {
-      background: #e6f7ff; /* light blue */
+      background: #e6f7ff;
     }
 
     #contact {
-      background: #138808; /* Indian green */
+      background: #138808;
       color: white;
     }
 
     .reviews {
-      background: #fce4ec; /* soft pink */
+      background: #fce4ec;
     }
 
     .map {
@@ -51,7 +51,7 @@
     }
 
     h2 {
-      color: #002366; /* deep blue */
+      color: #002366;
     }
 
     p {
@@ -75,6 +75,12 @@
       width: 250px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       border-left: 5px solid #002366;
+    }
+
+    .service-box svg {
+      height: 50px;
+      margin-bottom: 10px;
+      fill: #002366;
     }
 
     form {
@@ -158,14 +164,26 @@
     <h2>Our Services</h2>
     <div class="services">
       <div class="service-box">
+        <!-- Legal Advice Icon -->
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2C6.486 2 2 5.589 2 10c0 2.683 1.713 5.042 4.391 6.422L6 22l5.176-3.014C11.45 18.994 11.72 19 12 19c5.514 0 10-3.589 10-8s-4.486-9-10-9z"/>
+        </svg>
         <h3>Legal Advice</h3>
         <p>Talk to our experienced legal consultants online.</p>
       </div>
       <div class="service-box">
+        <!-- Document Drafting Icon -->
+        <svg viewBox="0 0 24 24">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6zM13 9V3.5L18.5 9H13z"/>
+        </svg>
         <h3>Document Drafting</h3>
         <p>We draft legal documents like affidavits, agreements, notices, etc.</p>
       </div>
       <div class="service-box">
+        <!-- Online Filing Icon -->
+        <svg viewBox="0 0 24 24">
+          <path d="M19 3H5a2 2 0 0 0-2 2v14l4-4h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/>
+        </svg>
         <h3>Online Filing</h3>
         <p>Get help with court filings, RTIs, and online applications.</p>
       </div>
