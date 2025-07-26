@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Legal Desk</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #333;
+        }
+        .hero {
+            background: url('images/banner.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .hero .overlay {
+            background: rgba(0, 47, 108, 0.6);
+            padding: 20px;
+            width: 100%;
+        }
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+        .section.alt {
+            background: linear-gradient(to bottom right, #FF9933, #FFFFFF, #138808);
+        }
+        .section h2 {
+            color: #002868;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .section ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.1rem;
+            line-height: 2;
+        }
+        .section ul li::before {
+            content: "⚖️ ";
+        }
+        .contact {
+            background-color: #eef2f7;
+            padding: 30px;
+            text-align: center;
+        }
+        footer {
+            background-color: #002868;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Banner -->
+    <div class="hero">
+        <div class="overlay">
+            <h1>Digital Legal Desk</h1>
+            <p>Your Trusted Online Legal Solution</p>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div class="section">
+        <h2>About Us</h2>
+        <p>We are a professional online legal service provider, committed to delivering fast, reliable, and affordable legal solutions across India.</p>
+    </div>
+
+    <!-- Services Section -->
+    <div class="section alt">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Legal Advice — Talk to our experienced legal consultants online.</li>
+            <li>Document Drafting — Affidavits, Agreements, Notices, etc.</li>
+            <li>Online Filing — Simplified online legal processes.</li>
+            <li>Startup Legal Support — Registrations, Compliance & More.</li>
+        </ul>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: +91-XXXXXXXXXX</p>
+        <p>Email: info@digitallegaldesk.com</p>
+        <p>Website: www.digitallegaldesk.com</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Digital Legal Desk. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
