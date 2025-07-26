@@ -6,7 +6,7 @@
   <title>Digital Legal Desk</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <style>
-    /* --- CSS Code remains same as you provided --- */
+    /* === All CSS same as before === */
     body { font-family: Arial, sans-serif; margin: 0; background: #f2f6fa; color: #333; scroll-behavior: smooth; }
     .fixed-logo { position: fixed; top: 10px; left: 10px; z-index: 1000; width: 60px; height: 60px; border-radius: 50%; background: white; padding: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
     header { background: url('https://img.freepik.com/free-photo/gavel-law-books-courtroom-concept_23-2149491876.jpg') no-repeat center center/cover; color: white; text-align: center; padding: 60px 20px; position: relative; overflow: hidden; animation: fadeIn 2s ease-out; }
@@ -183,13 +183,18 @@
   });
 </script>
 
-<!-- Yay! Chatbot Script -->
+<!-- Yay! Chatbot Integration -->
 <script>
-  (function(w,d,s,u){
-    w.YayChatWidgetID = 'YOUR_WIDGET_ID_HERE';  // <-- Replace this with actual Yay! Chatbot Widget ID
-    var js = d.createElement(s); js.async = true; js.src = u;
-    d.getElementsByTagName('head')[0].appendChild(js);
-  })(window,document,'script','https://yay.chat/widget.js');
+  (function(w, d, s, o, f, js, fjs) {
+    w['YAYChatWidgetObject'] = o;
+    w[o] = w[o] || function() { (w[o].q = w[o].q || []).push(arguments); };
+    js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+    js.id = o; js.src = 'https://cdn.yay.chat/widget.js'; fjs.parentNode.insertBefore(js, fjs);
+  })(window, document, 'script', 'yaychat');
+  
+  yaychat('init', {
+    widget_id: 'YOUR_WIDGET_ID_HERE'  // <-- Replace this with your Yay! Chatbot Widget ID
+  });
 </script>
 
 </body>
