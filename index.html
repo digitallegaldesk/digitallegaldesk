@@ -7,11 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background: #f2f6fa; color: #333; scroll-behavior: smooth; }
+
     .fixed-logo {
       position: fixed; top: 10px; left: 10px; z-index: 1000;
       width: 60px; height: 60px; border-radius: 50%;
       background: white; padding: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
+
     header {
       background: url('https://img.freepik.com/free-photo/gavel-law-books-courtroom-concept_23-2149491876.jpg') no-repeat center center/cover;
       color: white; text-align: center; padding: 60px 20px; position: relative; overflow: hidden;
@@ -28,6 +30,7 @@
       text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
     }
     p.subtitle { margin-top: 10px; font-size: 1.3em; }
+
     .navbar { display: flex; justify-content: center; background-color: #002366; flex-wrap: wrap; position: sticky; top: 0; z-index: 999; }
     .navbar a, .dropdown .dropbtn { color: white; padding: 14px 20px; text-decoration: none; display: inline-block; }
     .navbar a:hover, .dropdown:hover .dropbtn { background-color: #FF7518; }
@@ -36,46 +39,87 @@
     .dropdown-content a { color: black; padding: 12px 16px; text-decoration: none; display: block; }
     .dropdown-content a:hover { background-color: #ddd; }
     .dropdown:hover .dropdown-content { display: block; }
+
     section { padding: 50px 20px; text-align: center; opacity: 0; transform: translateY(50px); transition: all 1s ease-out; }
     section.show { opacity: 1; transform: translateY(0); }
+
     h2 { color: #002366; font-size: 2.5em; margin-bottom: 20px; }
     h3 { color: #FF7518; margin-bottom: 10px; }
+
     .services { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px; }
     .service-box { background: white; width: 270px; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transform: scale(0.9); opacity: 0; transition: transform 0.6s ease, opacity 1s ease; }
     .service-box.show { opacity: 1; transform: scale(1); animation: zoomIn 0.8s ease forwards; }
     .service-box img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
+
     .reviews .review { background: white; padding: 20px; margin: 10px auto; max-width: 600px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
     .reviews .review.show { opacity: 1; transform: translateY(0); }
+
     form { max-width: 400px; margin: auto; display: flex; flex-direction: column; gap: 15px; }
     input, textarea { padding: 12px; border-radius: 5px; border: 1px solid #ccc; font-size: 16px; }
     button { background: #002366; color: white; padding: 12px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer; }
     button:hover { background: #FF7518; }
+
     .map-container { margin-top: 40px; }
     iframe { width: 100%; border: none; }
+
     .news-iframe { width: 100%; height: 400px; border: none; margin-top: 20px; }
-    #about { position: relative; color: white; padding: 80px 20px;
-      background: url('https://img.freepik.com/free-photo/gavel-legal-office-desk_23-2149491963.jpg') no-repeat center center/cover; }
-    #about::after { content: ""; position: absolute; top:0; left:0; width:100%; height:100%;
-      background: rgba(0,0,0,0.6); z-index: 0; }
-    #about .content { position: relative; z-index: 1; max-width: 800px; margin: auto; text-align: center; }
+
+    #about {
+      position: relative; color: white; padding: 80px 20px;
+      background: url('https://img.freepik.com/free-photo/gavel-legal-office-desk_23-2149491963.jpg') no-repeat center center/cover;
+    }
+    #about::after {
+      content: ""; position: absolute; top:0; left:0; width:100%; height:100%;
+      background: rgba(0,0,0,0.6); z-index: 0;
+    }
+    #about .content {
+      position: relative; z-index: 1; max-width: 800px; margin: auto; text-align: center;
+    }
+    #about h2 { color: #fff; font-size: 2.5em; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+    #about p { font-size: 1.2em; line-height: 1.6; }
+
     @keyframes fadeIn { from { opacity: 0; transform: translateY(-50px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes zoomIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-    .whatsapp-float { position: fixed; bottom: 20px; right: 20px; z-index: 999;
+
+    .whatsapp-float {
+      position: fixed; bottom: 20px; right: 20px; z-index: 999;
       background: #25D366; color: white; width: 55px; height: 55px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       box-shadow: 0 2px 10px rgba(0,0,0,0.3); text-decoration: none; font-size: 28px;
-      animation: pulse 2s infinite; }
-    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
-    #backToTop { position: fixed; bottom: 80px; right: 20px; z-index: 999;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    #backToTop {
+      position: fixed; bottom: 80px; right: 20px; z-index: 999;
       background: #002366; color: white; padding: 10px 15px; border-radius: 50%;
-      display: none; cursor: pointer; font-size: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
-    /* YAY Chatbot Styles */
-    #yay-chatbot { position: fixed; bottom: 20px; right: 90px; z-index: 10000; }
-    #yay-chatbot button { background: #FF7518; color: white; padding: 12px 20px; border-radius: 25px; border: none; cursor: pointer; font-size: 16px; }
-    #chatWindow { position: fixed; bottom: 80px; right: 90px; width: 300px; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.3); display: none; flex-direction: column; }
-    #chatHeader { background: #002366; color: white; padding: 10px; display: flex; justify-content: space-between; align-items: center; }
-    #chatBody { padding: 10px; height: 200px; overflow-y: auto; font-size: 14px; }
-    #chatInput { padding: 10px; border: none; border-top: 1px solid #ddd; font-size: 14px; }
+      display: none; cursor: pointer; font-size: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Popup CSS */
+    .popup {
+      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); z-index: 10000; display: flex; align-items: center; justify-content: center;
+    }
+    .popup-content {
+      background: white; padding: 30px; border-radius: 10px; width: 90%; max-width: 400px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      animation: zoomIn 0.5s ease-out forwards;
+    }
+    .popup-content h2 { color: #002366; margin-bottom: 15px; }
+    .popup-content p { font-size: 1.1em; }
+    .popup-content .close {
+      position: absolute; top: 20px; right: 20px; font-size: 24px; cursor: pointer; color: #333;
+    }
+
+    @media (max-width: 600px) {
+      .services { flex-direction: column; align-items: center; }
+      .fixed-logo { width: 50px; height: 50px; }
+    }
   </style>
 </head>
 <body>
@@ -104,22 +148,72 @@
   <a href="#news">News</a>
 </div>
 
-<!-- Main Website Sections (About, Services, Reviews, Contact, News, Map)... -->
-
-<!-- YAY Chatbot -->
-<div id="yay-chatbot">
-  <button id="openChat">YAY 💬</button>
-  <div id="chatWindow">
-    <div id="chatHeader">YAY Chatbot <span id="closeChat">×</span></div>
-    <div id="chatBody">
-      <p>Hello! I'm YAY, your legal assistant bot. How can I help you?</p>
-    </div>
-    <input type="text" id="chatInput" placeholder="Type your message...">
+<section id="about" class="fade-section">
+  <div class="content">
+    <h2>About Us</h2>
+    <p>Digital Legal Desk is an innovative online legal platform designed to bridge the gap between expert legal assistance and those in need of quick, affordable, and reliable services across India.</p>
+    <p>From instant legal advice to professional document drafting and precise online filings, we ensure transparency, speed, and accuracy in all services.</p>
   </div>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service-box" id="legaladvice">
+      <img src="https://img.freepik.com/free-vector/online-legal-advice-illustration_23-2148697704.jpg" alt="Legal Advice">
+      <h3>Legal Advice</h3>
+      <p>Consult our experienced legal professionals for instant advice and guidance on various legal matters.</p>
+    </div>
+    <div class="service-box" id="documentdrafting">
+      <img src="https://img.freepik.com/free-vector/contract-signing-illustration_23-2148505072.jpg" alt="Document Drafting">
+      <h3>Document Drafting</h3>
+      <p>We provide professionally drafted legal documents including affidavits, agreements, notices, and more.</p>
+    </div>
+    <div class="service-box" id="onlinefiling">
+      <img src="https://img.freepik.com/free-vector/e-filing-tax-concept-illustration_114360-6959.jpg" alt="Online Filing">
+      <h3>Online Filing</h3>
+      <p>From court filings to RTI applications, we ensure accurate and timely online submissions.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews fade-section">
+  <h2>Client Reviews</h2>
+  <div class="review">⭐⭐⭐⭐⭐<br><strong>Ravi Kumar:</strong> Excellent and fast service! Highly recommend Digital Legal Desk.</div>
+  <div class="review">⭐⭐⭐⭐☆<br><strong>Meena Sharma:</strong> Very helpful legal advice at affordable prices. Thank you!</div>
+</section>
+
+<section id="contact" class="fade-section">
+  <h2>Contact Us</h2>
+  <form action="#">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" rows="4" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<section id="news" class="fade-section">
+  <h2>Latest Legal News</h2>
+  <iframe class="news-iframe" src="https://livelaw.in/" title="Legal News"></iframe>
+</section>
+
+<div class="map-container fade-section">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.001184114869!2d85.31213851438353!3d27.7172459327434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDQzJzAyLjEiTiA4NcKwMTgnNDYuOCJF!5e0!3m2!1sen!2sin!4v1624605023246!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
 </div>
 
 <a href="https://wa.me/918355068667" class="whatsapp-float">💬</a>
 <div id="backToTop">↑</div>
+
+<!-- Welcome Popup -->
+<div id="welcomePopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="document.getElementById('welcomePopup').style.display='none'">&times;</span>
+    <h2>Welcome to Digital Legal Desk!</h2>
+    <p>Get Instant Legal Solutions Online. Chat with our Experts or Book a Free Consultation Today.</p>
+    <a href="#contact" style="display:inline-block; margin-top:15px; padding:10px 20px; background:#FF7518; color:white; border-radius:5px; text-decoration:none;">Contact Us</a>
+  </div>
+</div>
 
 <script>
   const observer = new IntersectionObserver(entries => {
@@ -144,23 +238,11 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  document.getElementById('openChat').addEventListener('click', () => {
-    document.getElementById('chatWindow').style.display = 'flex';
-  });
-  document.getElementById('closeChat').addEventListener('click', () => {
-    document.getElementById('chatWindow').style.display = 'none';
-  });
-  document.getElementById('chatInput').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-      const userMsg = this.value;
-      if (userMsg.trim() !== "") {
-        const chatBody = document.getElementById('chatBody');
-        chatBody.innerHTML += `<p><strong>You:</strong> ${userMsg}</p>`;
-        chatBody.innerHTML += `<p><strong>YAY:</strong> Thanks for reaching out! A legal expert will connect with you shortly.</p>`;
-        this.value = '';
-        chatBody.scrollTop = chatBody.scrollHeight;
-      }
-    }
+  // Show Welcome Popup after 5 sec
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('welcomePopup').style.display = 'flex';
+    }, 5000);
   });
 </script>
 
