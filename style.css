@@ -1,13 +1,12 @@
-
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+  background: #fff;
   color: #333;
 }
 
 .hero {
-  background: url('banner.jpg') no-repeat center center/cover;
+  background: url('india-flag-banner.jpg') no-repeat center center/cover;
   height: 60vh;
   display: flex;
   align-items: center;
@@ -18,7 +17,7 @@ body {
 }
 
 .hero .overlay {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 47, 108, 0.6); /* Navy Blue overlay */
   padding: 20px;
   width: 100%;
 }
@@ -26,16 +25,25 @@ body {
 .section {
   padding: 40px 20px;
   text-align: center;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .section.alt {
-  background-color: #eef2f7;
+  background: linear-gradient(to bottom right, #FF9933, #FFFFFF, #138808);
 }
 
 .section h2 {
-  color: #003366;
+  color: #002868; /* Navy Blue */
   margin-bottom: 20px;
+  position: relative;
+}
+
+.section h2::after {
+  content: url('ashoka-chakra.png');
+  display: block;
+  margin: 10px auto 0;
+  width: 60px;
+  height: auto;
 }
 
 .section ul {
@@ -45,15 +53,31 @@ body {
   line-height: 2;
 }
 
+.section ul li::before {
+  content: "🇮🇳 ";
+}
+
 blockquote {
   font-style: italic;
   margin: 20px auto;
   max-width: 800px;
+  color: #FF9933;
+  border-left: 4px solid #138808;
+  padding-left: 20px;
 }
 
 footer {
-  background-color: #003366;
+  background-color: #002868;
   color: white;
   text-align: center;
   padding: 20px 10px;
+}
+
+footer::before {
+  content: url('small-ashoka-chakra.png');
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
 }
