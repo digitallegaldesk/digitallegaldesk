@@ -5,224 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Digital Legal Desk</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; color: #333; }
+    header { background: linear-gradient(135deg, #FF9933, #FF7518); color: white; text-align: center; padding: 40px 20px; }
+    header img { width: 80px; margin-bottom: 15px; }
+    h1 { margin: 0; font-size: 2.5em; }
+    p.subtitle { margin-top: 10px; font-size: 1.2em; }
 
-    header {
-      background: linear-gradient(135deg, #FF9933, #FF7518);
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
+    .navbar { display: flex; justify-content: center; background-color: #002366; }
+    .navbar a, .dropdown .dropbtn { color: white; padding: 14px 20px; text-decoration: none; display: inline-block; }
+    .navbar a:hover, .dropdown:hover .dropbtn { background-color: #FF7518; }
+    .dropdown { position: relative; display: inline-block; }
+    .dropdown-content { display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; z-index: 1; }
+    .dropdown-content a { color: black; padding: 12px 16px; text-decoration: none; display: block; }
+    .dropdown-content a:hover { background-color: #ddd; }
+    .dropdown:hover .dropdown-content { display: block; }
 
-    header img {
-      width: 70px;
-      margin-bottom: 10px;
-    }
+    section { padding: 50px 20px; text-align: center; }
+    h2 { color: #002366; font-size: 2em; margin-bottom: 20px; }
+    h3 { color: #FF7518; margin-bottom: 10px; }
 
-    section {
-      padding: 30px 20px;
-      text-align: center;
-    }
+    .services { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px; }
+    .service-box { background: white; width: 250px; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
 
-    #about {
-      background: #fffbe6;
-    }
+    .reviews .review { background: white; padding: 20px; margin: 10px auto; max-width: 600px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
 
-    #services {
-      background: #e6f7ff;
-    }
+    form { max-width: 400px; margin: auto; display: flex; flex-direction: column; gap: 15px; }
+    input, textarea { padding: 12px; border-radius: 5px; border: 1px solid #ccc; font-size: 16px; }
+    button { background: #002366; color: white; padding: 12px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #FF7518; }
 
-    #contact {
-      background: #138808;
-      color: white;
-    }
+    .whatsapp-button { display: inline-block; margin-top: 20px; background-color: #25D366; color: white; padding: 12px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; }
 
-    .reviews {
-      background: #fce4ec;
-    }
-
-    .map {
-      background: #f3f3f3;
-    }
-
-    h2 {
-      color: #002366;
-    }
-
-    p {
-      color: #333;
-      max-width: 700px;
-      margin: 0 auto 20px;
-    }
-
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .service-box {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      width: 250px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      border-left: 5px solid #002366;
-    }
-
-    .service-box svg {
-      height: 50px;
-      margin-bottom: 10px;
-      fill: #002366;
-    }
-
-    form {
-      max-width: 400px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    input, textarea {
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: none;
-    }
-
-    button {
-      background-color: #000080;
-      color: white;
-      padding: 10px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #333399;
-    }
-
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      padding: 15px 20px;
-      text-decoration: none;
-      border-radius: 30px;
-      font-size: 16px;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      z-index: 100;
-    }
-
-    .whatsapp-button:hover {
-      background-color: #128C7E;
-    }
-
-    .review {
-      background: white;
-      padding: 15px;
-      margin: 10px auto;
-      max-width: 600px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: 0;
+    @media (max-width: 600px) {
+      .services { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png" alt="Legal Logo">
-    <h1>Digital Legal Desk</h1>
-    <p>Your Trusted Online Legal Solution</p>
-  </header>
+<header>
+  <img src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png" alt="Legal Logo">
+  <h1>Digital Legal Desk</h1>
+  <p class="subtitle">Your Trusted Online Legal Solution</p>
+</header>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We are a professional online legal service provider, committed to delivering fast, reliable, and affordable legal solutions across India.</p>
-  </section>
-
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="service-box">
-        <!-- Legal Advice Icon -->
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2C6.486 2 2 5.589 2 10c0 2.683 1.713 5.042 4.391 6.422L6 22l5.176-3.014C11.45 18.994 11.72 19 12 19c5.514 0 10-3.589 10-8s-4.486-9-10-9z"/>
-        </svg>
-        <h3>Legal Advice</h3>
-        <p>Talk to our experienced legal consultants online.</p>
-      </div>
-      <div class="service-box">
-        <!-- Document Drafting Icon -->
-        <svg viewBox="0 0 24 24">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6zM13 9V3.5L18.5 9H13z"/>
-        </svg>
-        <h3>Document Drafting</h3>
-        <p>We draft legal documents like affidavits, agreements, notices, etc.</p>
-      </div>
-      <div class="service-box">
-        <!-- Online Filing Icon -->
-        <svg viewBox="0 0 24 24">
-          <path d="M19 3H5a2 2 0 0 0-2 2v14l4-4h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/>
-        </svg>
-        <h3>Online Filing</h3>
-        <p>Get help with court filings, RTIs, and online applications.</p>
-      </div>
+<div class="navbar">
+  <a href="#about">About</a>
+  <div class="dropdown">
+    <button class="dropbtn">Services ▼</button>
+    <div class="dropdown-content">
+      <a href="#legaladvice">Legal Advice</a>
+      <a href="#documentdrafting">Document Drafting</a>
+      <a href="#onlinefiling">Online Filing</a>
     </div>
-  </section>
+  </div>
+  <a href="#contact">Contact</a>
+</div>
 
-  <section class="reviews">
-    <h2>Client Reviews</h2>
-    <div class="review">
-      ⭐⭐⭐⭐⭐ <br>
-      <strong>Ravi Kumar:</strong> Excellent and fast service! Highly recommend Digital Legal Desk.
+<section id="about">
+  <h2>About Us</h2>
+  <p>We are a professional online legal service provider, committed to delivering fast, reliable, and affordable legal solutions across India.</p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service-box" id="legaladvice">
+      <h3>Legal Advice</h3>
+      <p>Talk to our experienced legal consultants online.</p>
     </div>
-    <div class="review">
-      ⭐⭐⭐⭐☆ <br>
-      <strong>Meena Sharma:</strong> Very helpful legal advice at affordable prices. Thank you!
+    <div class="service-box" id="documentdrafting">
+      <h3>Document Drafting</h3>
+      <p>We draft legal documents like affidavits, agreements, notices, etc.</p>
     </div>
-  </section>
+    <div class="service-box" id="onlinefiling">
+      <h3>Online Filing</h3>
+      <p>Get help with court filings, RTIs, and online applications.</p>
+    </div>
+  </div>
+</section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form action="#">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" rows="4" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+<section class="reviews">
+  <h2>Client Reviews</h2>
+  <div class="review">
+    ⭐⭐⭐⭐⭐<br>
+    <strong>Ravi Kumar:</strong> Excellent and fast service! Highly recommend Digital Legal Desk.
+  </div>
+  <div class="review">
+    ⭐⭐⭐⭐☆<br>
+    <strong>Meena Sharma:</strong> Very helpful legal advice at affordable prices. Thank you!
+  </div>
+</section>
 
-  <section class="map">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.8390305893814!2d80.33187317513247!3d26.84968157670553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c387c1b02b6e1%3A0x6c87b3346c14e46c!2sKanpur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1652679536599!5m2!1sen!2sin"
-      allowfullscreen=""
-      loading="lazy"
-    ></iframe>
-  </section>
-
-  <a href="https://wa.me/918355068667" class="whatsapp-button" target="_blank">
-    💬 Chat with us
-  </a>
+<section id="contact">
+  <h2>Contact Us</h2>
+  <form action="#">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" rows="4" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+  <a href="https://wa.me/918355068667" class="whatsapp-button">💬 Chat with us</a>
+</section>
 
 </body>
 </html>
