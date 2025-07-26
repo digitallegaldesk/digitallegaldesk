@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Digital Legal Desk</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; color: #333; }
+    body { font-family: Arial, sans-serif; margin: 0; background: #f2f6fa; color: #333; }
     header { background: linear-gradient(135deg, #FF9933, #FF7518); color: white; text-align: center; padding: 40px 20px; }
     header img { width: 80px; margin-bottom: 15px; }
-    h1 { margin: 0; font-size: 2.5em; }
-    p.subtitle { margin-top: 10px; font-size: 1.2em; }
+    h1 { margin: 0; font-size: 2.8em; }
+    p.subtitle { margin-top: 10px; font-size: 1.3em; }
 
-    .navbar { display: flex; justify-content: center; background-color: #002366; }
+    .navbar { display: flex; justify-content: center; background-color: #002366; flex-wrap: wrap; }
     .navbar a, .dropdown .dropbtn { color: white; padding: 14px 20px; text-decoration: none; display: inline-block; }
     .navbar a:hover, .dropdown:hover .dropbtn { background-color: #FF7518; }
     .dropdown { position: relative; display: inline-block; }
@@ -21,11 +21,13 @@
     .dropdown:hover .dropdown-content { display: block; }
 
     section { padding: 50px 20px; text-align: center; }
-    h2 { color: #002366; font-size: 2em; margin-bottom: 20px; }
+    h2 { color: #002366; font-size: 2.2em; margin-bottom: 20px; }
     h3 { color: #FF7518; margin-bottom: 10px; }
 
     .services { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px; }
-    .service-box { background: white; width: 250px; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .service-box { background: white; width: 270px; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .service-box:hover { transform: translateY(-10px); }
+    .service-box img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
 
     .reviews .review { background: white; padding: 20px; margin: 10px auto; max-width: 600px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
 
@@ -35,6 +37,11 @@
     button:hover { background: #FF7518; }
 
     .whatsapp-button { display: inline-block; margin-top: 20px; background-color: #25D366; color: white; padding: 12px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; }
+
+    .map-container { margin-top: 40px; }
+    iframe { width: 100%; height: 350px; border: none; }
+
+    .news-link { margin-top: 30px; display: inline-block; background: #FF7518; color: white; padding: 12px 20px; text-decoration: none; border-radius: 25px; }
 
     @media (max-width: 600px) {
       .services { flex-direction: column; align-items: center; }
@@ -60,27 +67,32 @@
     </div>
   </div>
   <a href="#contact">Contact</a>
+  <a href="#news">News & Updates</a>
 </div>
 
 <section id="about">
   <h2>About Us</h2>
-  <p>We are a professional online legal service provider, committed to delivering fast, reliable, and affordable legal solutions across India.</p>
+  <p>Digital Legal Desk is a dedicated online platform that bridges the gap between legal expertise and individuals or businesses seeking affordable, prompt, and reliable legal solutions across India. With a team of experienced advocates, legal consultants, and document specialists, we ensure that you receive professional guidance right from your home.</p>
+  <p>We specialize in legal advisory, document drafting, filing services, and compliance support, delivering excellence with transparency. Whether it's a personal legal query, drafting an agreement, or filing an RTI, our digital desk ensures smooth, hassle-free service at your fingertips.</p>
 </section>
 
 <section id="services">
   <h2>Our Services</h2>
   <div class="services">
     <div class="service-box" id="legaladvice">
+      <img src="https://img.freepik.com/free-vector/online-legal-advice-illustration_23-2148697704.jpg" alt="Legal Advice">
       <h3>Legal Advice</h3>
-      <p>Talk to our experienced legal consultants online.</p>
+      <p>Consult our experienced legal professionals for instant advice and guidance on various legal matters, contracts, and disputes.</p>
     </div>
     <div class="service-box" id="documentdrafting">
+      <img src="https://img.freepik.com/free-vector/contract-signing-illustration_23-2148505072.jpg" alt="Document Drafting">
       <h3>Document Drafting</h3>
-      <p>We draft legal documents like affidavits, agreements, notices, etc.</p>
+      <p>We provide professionally drafted legal documents including affidavits, agreements, notices, wills, NDAs, and more.</p>
     </div>
     <div class="service-box" id="onlinefiling">
+      <img src="https://img.freepik.com/free-vector/e-filing-tax-concept-illustration_114360-6959.jpg" alt="Online Filing">
       <h3>Online Filing</h3>
-      <p>Get help with court filings, RTIs, and online applications.</p>
+      <p>From court filings to RTI applications and government documentation, we ensure accurate and timely submissions online.</p>
     </div>
   </div>
 </section>
@@ -107,6 +119,15 @@
   </form>
   <a href="https://wa.me/918355068667" class="whatsapp-button">💬 Chat with us</a>
 </section>
+
+<section id="news">
+  <h2>Latest News & Updates</h2>
+  <a href="https://www.livelaw.in/" class="news-link" target="_blank">📢 Visit Legal News Portal</a>
+</section>
+
+<div class="map-container">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.001184114869!2d85.31213851438353!3d27.7172459327434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDQzJzAyLjEiTiA4NcKwMTgnNDYuOCJF!5e0!3m2!1sen!2sin!4v1624605023246!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+</div>
 
 </body>
 </html>
