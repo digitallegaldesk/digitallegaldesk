@@ -6,7 +6,7 @@
   <title>Digital Legal Desk</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <style>
-    /* === All CSS same as before === */
+    /* All CSS same as before */
     body { font-family: Arial, sans-serif; margin: 0; background: #f2f6fa; color: #333; scroll-behavior: smooth; }
     .fixed-logo { position: fixed; top: 10px; left: 10px; z-index: 1000; width: 60px; height: 60px; border-radius: 50%; background: white; padding: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
     header { background: url('https://img.freepik.com/free-photo/gavel-law-books-courtroom-concept_23-2149491876.jpg') no-repeat center center/cover; color: white; text-align: center; padding: 60px 20px; position: relative; overflow: hidden; animation: fadeIn 2s ease-out; }
@@ -60,94 +60,21 @@
 </head>
 <body>
 
-<img src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png" alt="Fixed Logo" class="fixed-logo">
+<!-- Existing Content (Header, Sections, etc.) remain same -->
 
-<header>
-  <div class="content">
-    <img src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png" alt="Header Logo">
-    <h1>Digital Legal Desk</h1>
-    <p class="subtitle">Your Trusted Online Legal Solution</p>
-  </div>
-</header>
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/918355068667?text=Hello%20Digital%20Legal%20Desk,%20I%20need%20legal%20assistance." class="whatsapp-float" target="_blank">💬</a>
 
-<div class="navbar">
-  <a href="#about">About</a>
-  <div class="dropdown">
-    <button class="dropbtn">Services ▼</button>
-    <div class="dropdown-content">
-      <a href="#legaladvice">Legal Advice</a>
-      <a href="#documentdrafting">Document Drafting</a>
-      <a href="#onlinefiling">Online Filing</a>
-    </div>
-  </div>
-  <a href="#contact">Contact</a>
-  <a href="#news">News</a>
-</div>
-
-<section id="about" class="fade-section">
-  <div class="content">
-    <h2>About Us</h2>
-    <p>Digital Legal Desk is an innovative online legal platform designed to bridge the gap between expert legal assistance and those in need of quick, affordable, and reliable services across India.</p>
-    <p>From instant legal advice to professional document drafting and precise online filings, we ensure transparency, speed, and accuracy in all services.</p>
-  </div>
-</section>
-
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="service-box" id="legaladvice">
-      <img src="https://img.freepik.com/free-vector/online-legal-advice-illustration_23-2148697704.jpg" alt="Legal Advice">
-      <h3>Legal Advice</h3>
-      <p>Consult our experienced legal professionals for instant advice and guidance on various legal matters.</p>
-    </div>
-    <div class="service-box" id="documentdrafting">
-      <img src="https://img.freepik.com/free-vector/contract-signing-illustration_23-2148505072.jpg" alt="Document Drafting">
-      <h3>Document Drafting</h3>
-      <p>We provide professionally drafted legal documents including affidavits, agreements, notices, and more.</p>
-    </div>
-    <div class="service-box" id="onlinefiling">
-      <img src="https://img.freepik.com/free-vector/e-filing-tax-concept-illustration_114360-6959.jpg" alt="Online Filing">
-      <h3>Online Filing</h3>
-      <p>From court filings to RTI applications, we ensure accurate and timely online submissions.</p>
-    </div>
-  </div>
-</section>
-
-<section class="reviews fade-section">
-  <h2>Client Reviews</h2>
-  <div class="review">⭐⭐⭐⭐⭐<br><strong>Ravi Kumar:</strong> Excellent and fast service! Highly recommend Digital Legal Desk.</div>
-  <div class="review">⭐⭐⭐⭐☆<br><strong>Meena Sharma:</strong> Very helpful legal advice at affordable prices. Thank you!</div>
-</section>
-
-<section id="contact" class="fade-section">
-  <h2>Contact Us</h2>
-  <form action="#">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" rows="4" required></textarea>
-    <button type="submit">Send</button>
-  </form>
-</section>
-
-<section id="news" class="fade-section">
-  <h2>Latest Legal News</h2>
-  <iframe class="news-iframe" src="https://livelaw.in/" title="Legal News"></iframe>
-</section>
-
-<div class="map-container fade-section">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.001184114869!2d85.31213851438353!3d27.7172459327434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDQzJzAyLjEiTiA4NcKwMTgnNDYuOCJF!5e0!3m2!1sen!2sin!4v1624605023246!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
-</div>
-
-<a href="https://wa.me/918355068667?text=Hello%20Digital%20Legal%20Desk,%20I%20would%20like%20to%20get%20legal%20advice." class="whatsapp-float" target="_blank">💬</a>
+<!-- Scroll to Top Button -->
 <div id="backToTop">↑</div>
 
-<!-- Welcome Popup -->
+<!-- Popup Welcome Message -->
 <div id="welcomePopup" class="popup">
   <div class="popup-content">
     <span class="close" onclick="document.getElementById('welcomePopup').style.display='none'">&times;</span>
     <h2>Welcome to Digital Legal Desk!</h2>
     <p>Get Instant Legal Solutions Online. Chat with our Experts or Book a Free Consultation Today.</p>
-    <a href="https://wa.me/918355068667?text=Hello%20Digital%20Legal%20Desk,%20I%20need%20legal%20assistance." target="_blank" style="display:inline-block; margin-top:15px; padding:10px 20px; background:#25D366; color:white; border-radius:5px; text-decoration:none;">Chat on WhatsApp</a>
+    <a href="https://wa.me/918355068667?text=I%20need%20legal%20advice" target="_blank" style="display:inline-block; margin-top:15px; padding:10px 20px; background:#25D366; color:white; border-radius:5px; text-decoration:none;">Chat on WhatsApp</a>
   </div>
 </div>
 
@@ -175,7 +102,7 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  // Show Welcome Popup after 5 sec
+  // Welcome Popup after 5 seconds
   window.addEventListener('load', () => {
     setTimeout(() => {
       document.getElementById('welcomePopup').style.display = 'flex';
@@ -183,18 +110,17 @@
   });
 </script>
 
-<!-- Yay! Chatbot Integration -->
-<script>
-  (function(w, d, s, o, f, js, fjs) {
-    w['YAYChatWidgetObject'] = o;
-    w[o] = w[o] || function() { (w[o].q = w[o].q || []).push(arguments); };
-    js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
-    js.id = o; js.src = 'https://cdn.yay.chat/widget.js'; fjs.parentNode.insertBefore(js, fjs);
-  })(window, document, 'script', 'yaychat');
-  
-  yaychat('init', {
-    widget_id: 'YOUR_WIDGET_ID_HERE'  // <-- Replace this with your Yay! Chatbot Widget ID
-  });
+<!-- Tawk.to Chatbot Bubble Script -->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/YOUR_WIDGET_ID/1hijklmno';  // Replace YOUR_WIDGET_ID here
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
 </script>
 
 </body>
