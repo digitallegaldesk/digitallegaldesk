@@ -52,6 +52,22 @@
 
     #backToTop { position: fixed; bottom: 80px; right: 20px; z-index: 999; background: #002366; color: white; padding: 10px 15px; border-radius: 50%; display: none; cursor: pointer; font-size: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
 
+    @keyframes tidioShake {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      20% { transform: translate(-2px, 2px) rotate(-2deg); }
+      40% { transform: translate(-2px, -2px) rotate(2deg); }
+      60% { transform: translate(2px, 2px) rotate(0deg); }
+      80% { transform: translate(2px, -2px) rotate(2deg); }
+      100% { transform: translate(0, 0) rotate(0deg); }
+    }
+
+    #tidio-chat {
+      left: 20px !important;
+      right: auto !important;
+      bottom: 20px !important;
+      animation: tidioShake 1s infinite;
+    }
+
     @media (max-width: 600px) {
       .services { flex-direction: column; align-items: center; }
       .fixed-logo { width: 50px; height: 50px; }
@@ -87,7 +103,6 @@
 <section id="about">
   <h2>About Us</h2>
   <p>Digital Legal Desk is an innovative online legal platform designed to bridge the gap between expert legal assistance and those in need of quick, affordable, and reliable services across India.</p>
-  <p>From instant legal advice to professional document drafting and precise online filings, we ensure transparency, speed, and accuracy in all services.</p>
 </section>
 
 <section id="services">
@@ -114,7 +129,6 @@
 <section class="reviews">
   <h2>Client Reviews</h2>
   <div class="review">⭐⭐⭐⭐⭐<br><strong>Ravi Kumar:</strong> Excellent and fast service! Highly recommend Digital Legal Desk.</div>
-  <div class="review">⭐⭐⭐⭐☆<br><strong>Meena Sharma:</strong> Very helpful legal advice at affordable prices. Thank you!</div>
 </section>
 
 <section id="contact">
@@ -149,34 +163,6 @@
 
 <div id="backToTop">↑</div>
 
-<script>
-  const backToTop = document.getElementById('backToTop');
-  window.addEventListener('scroll', () => {
-    if(window.scrollY > 300){
-      backToTop.style.display = 'block';
-    } else {
-      backToTop.style.display = 'none';
-    }
-  });
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      alert("Welcome to Digital Legal Desk! Get Instant Legal Solutions Online.");
-    }, 5000);
-  });
-</script>
-
-<style>
-  #tidio-chat {
-    left: 20px !important;
-    right: auto !important;
-    bottom: 20px !important;
-  }
-</style>  
-<!-- Tidio Chatbot Embed Code -->
 <script src="//code.tidio.co/jsvofmnjfrslrhyy4takxp8fyxygvcss.js" async></script>
 
 </body>
