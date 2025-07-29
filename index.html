@@ -4,14 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Digital Legal Desk</title>
-  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Orbitron', sans-serif;
       background-color: #f9f9f9;
@@ -25,31 +21,24 @@
       justify-content: space-between;
       color: #fff;
     }
-    header img {
-      height: 50px;
-    }
+    header img { height: 50px; }
     nav a {
       color: white;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
+    nav a:hover { text-decoration: underline; }
+
     #hero {
       background: linear-gradient(to right, #00264d, #004080);
       color: white;
       padding: 80px 20px;
       text-align: center;
     }
-    #hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-    }
-    #hero p {
-      font-size: 1.2rem;
-    }
+    #hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+    #hero p { font-size: 1.2rem; }
+
     #services {
       padding: 40px 20px;
       background: #fff;
@@ -84,9 +73,8 @@
       margin: 15px 0 10px;
       color: #004080;
     }
-    .service-box p {
-      font-size: 0.95rem;
-    }
+    .service-box p { font-size: 0.95rem; }
+
     #contact {
       background-color: #e6f2ff;
       padding: 40px 20px;
@@ -122,6 +110,7 @@
     #contact button:hover {
       background-color: #003366;
     }
+
     footer {
       background-color: #00264d;
       color: white;
@@ -135,7 +124,6 @@
       font-size: 1.2rem;
     }
 
-    /* WhatsApp Button */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -151,10 +139,7 @@
       z-index: 100;
       box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
-
-    .whatsapp-float:hover {
-      background: #1ebd5b;
-    }
+    .whatsapp-float:hover { background: #1ebd5b; }
 
     @media (max-width: 768px) {
       .services {
@@ -167,7 +152,7 @@
 <body>
 
   <header>
-    <img src="images/logo.png" alt="Digital Legal Desk Logo">
+    <img src="assets/logo.png" alt="Digital Legal Desk Logo">
     <nav>
       <a href="#hero">Home</a>
       <a href="#services">Services</a>
@@ -183,18 +168,18 @@
   <section id="services">
     <h2>Our Services</h2>
     <div class="services">
-      <div class="service-box" id="legaladvice">
-        <img src="images/legal.jpg" alt="Legal Advice">
+      <div class="service-box">
+        <img src="assets/legal.jpg" alt="Legal Advice">
         <h3>Legal Advice</h3>
         <p>Consult our experienced legal professionals for instant advice and guidance on various legal matters.</p>
       </div>
-      <div class="service-box" id="documentdrafting">
-        <img src="images/document.jpg" alt="Document Drafting">
+      <div class="service-box">
+        <img src="assets/document.jpg" alt="Document Drafting">
         <h3>Document Drafting</h3>
         <p>We provide professionally drafted legal documents including affidavits, agreements, notices, and more.</p>
       </div>
-      <div class="service-box" id="onlinefiling">
-        <img src="images/filing.jpg" alt="Online Filing">
+      <div class="service-box">
+        <img src="assets/file_0000000.jpg" alt="Online Filing">
         <h3>Online Filing</h3>
         <p>From court filings to RTI applications, we ensure accurate and timely online submissions.</p>
       </div>
